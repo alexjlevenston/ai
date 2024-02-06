@@ -23,6 +23,7 @@ export type Message = {
    * not be set.
    */
   function_call?: string | ChatCompletionRequestMessageFunctionCall
+  evidence?: Array<{ question: string; link: string }> | undefined
 }
 
 export type CreateMessage = Omit<Message, 'id'> & {
